@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Arkkona Biuro">
+<meta property="og:title" content="Wakacje składkowe: инструкция RWS в&nbsp;eZUS">
+<meta property="og:description" content="Два маршрута по&nbsp;экранам eZUS: первая подача и&nbsp;повторная&nbsp;– со справкой из&nbsp;SUDOP.">
+<meta property="og:url" content="https://indrad3v4.github.io/zus-kanikuly-instrukcja/">
+<meta property="og:image" content="https://indrad3v4.github.io/zus-kanikuly-instrukcja/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Arkkona Biuro&nbsp;– инструкция RWS в&nbsp;eZUS">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://indrad3v4.github.io/zus-kanikuly-instrukcja/og.png">
+<title>Wakacje składkowe: пошаговая инструкция RWS</title>
+<meta name="description" content="Два маршрута по&nbsp;экранам eZUS: первая подача RWS и&nbsp;повторная с&nbsp;справкой SUDOP.">
+<style>
+@font-face{font-family:"Montserrat";src:url(fonts/montserrat-ext.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Lora";src:url(fonts/lora-ext.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+:root{--sans:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;--navy:#0E1B2C;--panel:#0B1624;--ink:#EDE7DA;--muted:#93A1B0;--gold:#C69B3C;--gold-deep:#8A6A1F;--line:#E3DCCB;--red:#B4432C}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--panel);color:var(--ink);font:16px/1.55 var(--sans)}
+h1,h2,.brand{font-family:"Lora",Georgia,serif;font-weight:600;text-wrap:balance}
+p,li{text-wrap:pretty}
+a{color:inherit}
+.top{background:var(--navy);color:#fff;padding:18px 20px}
+.top-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.mark{display:inline-flex;align-items:center;line-height:0}
+.brand-t{display:flex;flex-direction:column;line-height:1.15}
+.brand-t b{font-family:"Lora",serif;font-size:20px}
+.brand-t small{font-size:14px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.top .tg{margin-left:auto;background:var(--gold);color:#20180A;border:1px solid var(--gold);border-radius:3px;padding:12px 16px;font-family:var(--sans);font-weight:600;font-size:16px;cursor:pointer}
+.top .tg:hover{background:var(--navy);color:#0B1624}
+.top .tg .short{display:none}
+.top .tg .long{display:inline}
+@media (max-width:767px){.top .tg{padding:10px 12px;white-space:nowrap}.top .tg .long{display:none}.top .tg .short{display:inline}}
+.top .pdf{margin-left:0;background:var(--gold);color:#20180A;border:0;border-radius:3px;padding:13px 18px;font-family:var(--sans);font-weight:600;font-size:16px;cursor:pointer}
+.shell{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:40px;padding:0 20px}
+.shell.routed{grid-template-columns:minmax(0,1fr) 288px}
+.shell:not(.routed) .main{max-width:860px}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow:auto;scrollbar-width:thin;scrollbar-color:#3E5876 transparent;padding:26px 0 26px 4px;display:none;order:2}
+.side.on{display:block}
+.side .cap{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;padding:0 8px}
+.side a{display:flex;align-items:center;gap:9px;min-height:42px;text-decoration:none;font-size:14px;color:var(--muted);padding:8px;border-radius:3px;line-height:20px}
+.side a span{display:block}
+.side a b{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 4px;border-radius:50%;background:var(--navy);color:#fff;font-size:14px;flex:0 0 auto}
+.side a:hover{background:var(--panel);color:var(--ink)}
+.side a.act{background:var(--panel);color:var(--ink);font-weight:600}
+.side a.act b{background:var(--gold);color:#20180A}
+.side a.prep b{background:var(--navy);color:#fff}
+.side .switch{margin:18px 8px 0;border-top:1px solid var(--line);padding-top:14px}
+.side .switch button{width:100%;text-align:left;background:none;border:1px solid var(--line);border-radius:3px;padding:10px 12px;font:600 14px Montserrat,sans-serif;color:var(--navy);cursor:pointer}
+.main{min-width:0;padding-bottom:50px;order:1}
+.tocm{display:none;background:#101E30;border:1px solid var(--line);border-radius:4px;margin:6px 0 14px;padding:10px 14px}
+.tocm summary{cursor:pointer;font-weight:600;color:var(--navy)}
+.tocm a{display:flex;gap:8px;text-decoration:none;color:var(--muted);font-size:14px;padding:6px 0}
+.tocm a b{color:var(--navy)}
+.hero{padding:34px 0 6px}
+.hero h1{font-size:clamp(28px,4.6vw,40px);line-height:1.08;margin:0 0 12px;letter-spacing:-.01em}
+.hero p.sub{font-size:20px;max-width:56ch;margin:0 0 18px}
+.choose{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin:8px 0 6px}
+.choose button{text-align:left;cursor:pointer;border:2px solid var(--navy);border-radius:4px;background:#101E30;padding:20px 20px 18px;font-family:inherit}
+.choose button:hover{background:var(--panel)}
+.choose b{display:block;font:600 20px Lora,serif;margin-bottom:6px}
+.choose span{display:block;font-size:14px;color:var(--muted);line-height:1.45}
+.choose button.pri{background:#101E30;border-color:var(--navy);color:var(--ink)}
+.choose button.pri span{color:var(--muted)}
+.choose button.pri:hover{background:var(--panel)}
+.routebar{display:none;align-items:center;justify-content:space-between;gap:12px;background:#101E30;border:1px solid var(--line);border-radius:4px;padding:12px 14px;margin:6px 0 4px;font-size:14px;color:var(--muted)}
+.routebar.on{display:flex}
+.routebar button{border:0;background:none;color:var(--navy);font:600 14px var(--sans);text-decoration:underline;cursor:pointer;padding:6px 0}
+.jump{display:none;position:sticky;top:0;z-index:5;background:#101E30;border-bottom:1px solid var(--line);padding:10px 0;overflow-x:auto}
+.jump a{display:flex;align-items:center;gap:7px;text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:8px 13px;font-size:14px;white-space:nowrap;color:var(--muted)}
+.jump a b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:14px}
+.jump a.act{border-color:var(--gold-deep);color:var(--ink)}
+.jump-in{display:flex;gap:8px;padding:0 20px;width:max-content}
+.step{display:flex;gap:18px;padding:32px 0;border-bottom:1px solid var(--line);scroll-margin-top:70px}
+.step .num{flex:0 0 auto;width:52px;height:52px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font:600 20px Lora,serif}
+.step.pre .num{background:var(--navy);color:#fff;font-size:20px}
+.step.prep .num{background:var(--navy);color:#fff;font-size:20px}
+.step .body{min-width:0;flex:1}
+.screen{margin:0 0 8px;font-size:14px;color:var(--muted);letter-spacing:0}
+.step h2{font-size:28px;line-height:1.25;margin:6px 0 8px}
+.step .lead{margin:0 0 12px;color:var(--muted);font-size:20px}
+.do{margin:0 0 16px;padding-left:24px}
+.do li{margin:0 0 8px}
+.shot{margin:0 0 14px}
+.shot img{display:block;width:100%;max-width:560px;height:auto;border:1px solid var(--line);border-radius:3px;box-shadow:0 6px 18px rgba(14,27,44,.08);cursor:zoom-in;transition:box-shadow .15s}.shot img:hover{box-shadow:0 10px 26px rgba(14,27,44,.16)}.shot figcaption{max-width:560px}#lb{position:fixed;inset:0;z-index:60;background:rgba(10,17,27,.92);display:none;align-items:flex-start;justify-content:center;padding:24px;overflow:auto;cursor:zoom-out}#lb.on{display:flex}#lb img{max-width:min(100%,1100px);height:auto;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.5)}#lb .x{position:fixed;top:14px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:#101E30;color:#0E1B2C;font:600 22px/1 Montserrat,sans-serif;cursor:pointer}.ask{margin:16px 0 0;font-size:15px;color:var(--muted)}.ask a{color:var(--navy);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold)}@media print{.top .tg,.top .pdf,.side,.jump,.routebar,.choose,.tocm{display:none!important}.shell{display:block;max-width:none;padding:0}.step{break-inside:avoid;padding:18px 0;page-break-inside:avoid}.step .num{background:#0E1B2C!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.shot img{max-width:100%;box-shadow:none;cursor:auto}.hero{padding:0 0 8px}body{background:#101E30}a[href]:after{content:''}}
+.shot figcaption{font-size:14px;line-height:1.5;color:#A7B4C2;margin-top:8px;padding-left:10px;border-left:2px solid var(--gold)}
+.shot figcaption b{color:var(--navy);font-weight:600}
+.note{margin:26px 0 0;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:3px;padding:16px 18px;background:var(--panel)}
+.note h2{font-size:20px;margin:0 0 8px}
+.note p,.note li{font-size:16px}
+.links{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.links li{border:1px solid var(--line);border-radius:3px;padding:12px 14px;background:#101E30}
+.links a{display:block;font-weight:600;text-decoration:none}
+.links span{font-size:14px;color:var(--muted)}
+.foot{background:var(--navy);color:#9FB0C2;padding:34px 20px}
+.foot-in{max-width:1180px;margin:0 auto;display:grid;gap:18px;grid-template-columns:1fr 1fr}
+.foot a{color:var(--gold);text-decoration:none}
+.foot p{margin:0 0 6px;font-size:14px}
+.foot small{display:block;max-width:1180px;margin:20px auto 0;font-size:14px;opacity:.72;line-height:1.6}
+@media (max-width:960px){
+  .top{padding:12px 16px}
+  .top-in{flex-wrap:nowrap;gap:10px}
+  .top .pdf{padding:9px 12px;font-size:14px;white-space:nowrap}
+  .brand-t small{font-size:14px;line-height:20px;letter-spacing:.04em}
+  .top .pdf{padding:10px 12px}
+  .shell{padding:0 16px}
+  .hero{padding:20px 0 4px}
+  .hero h1{font-size:clamp(24px,7.2vw,32px)}
+  .tocm summary{min-height:48px;display:flex;align-items:center;margin:0 -14px;padding:0 14px}
+  .main{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
+  .shell,.shell.routed{grid-template-columns:1fr;gap:0}
+  .side{display:none!important}
+  .jump.on{display:block}
+  .tocm{display:none!important}
+  .choose{grid-template-columns:1fr}
+  .step{gap:12px;padding:26px 0}
+  .step .num{width:44px;height:44px;font-size:20px}
+  .foot-in{grid-template-columns:1fr}
+}
+@media (max-width:420px){
+  .brand-t small{display:none}
+  .top-in{gap:8px}
+  .top .pdf{font-size:14px;padding:10px 12px}
+}
+@media print{
+  @page{margin:16mm 14mm}
+  body{font-size:11pt}
+  .jump,.choose,.top .pdf,.side{display:none!important}
+  .shell{grid-template-columns:1fr;padding:0}
+  .top{background:#101E30;color:#000;padding:0 0 10pt;border-bottom:1.5pt solid #0E1B2C}
+  .mark{color:#0E1B2C;border-color:#0E1B2C}
+  .brand-t small{opacity:1;color:#333}
+  .hero h1{font-size:28px}
+  .step{padding:12pt 0}
+  .screen{margin:0 0 8px;font-size:14px;color:var(--muted);letter-spacing:0}
+.step h2{break-after:avoid-page}
+  .shot{break-inside:avoid-page;margin-bottom:8pt}
+  .shot img{max-height:150mm;width:auto;max-width:100%;margin:0 auto}
+  .foot{background:#101E30;color:#333;border-top:1pt solid #999}
+  .foot a{color:#000}
+}
+/* ===== brand kit v3: тыпаграфіка, шчыльнасць, адзін кампанент кроку ===== */
+:root{--r-sm:6px;--r-md:10px;--r-stamp:3px;--shadow:0 1px 2px rgba(14,27,44,.05),0 10px 28px rgba(14,27,44,.07)}
+body{font-size:16px;line-height:24px}
+.top-in,.shell,.foot-in,.foot small{max-width:1200px}
+.shell{padding:0 24px}
+.hero h1{font-size:40px;line-height:48px;letter-spacing:0;text-wrap:balance}
+.hero p.sub{font-size:20px;line-height:28px;max-width:64ch;text-wrap:pretty}
+.step h2{font-size:28px;line-height:36px;margin:8px 0 10px;text-wrap:balance}
+.step .lead{font-size:20px;line-height:28px;max-width:70ch;text-wrap:pretty}
+.step{padding:40px 0;gap:20px}
+.step .screen{font-size:14px;line-height:20px}
+.step li,.note li,.note p{font-size:16px;line-height:24px;max-width:70ch;text-wrap:pretty}
+.shot figcaption{font-size:14px;line-height:20px;text-wrap:pretty}
+.step .card,.shot,.note,.choose button,.routebar{border-radius:var(--r-md);box-shadow:var(--shadow)}
+.top .pdf,.side .switch button,.jump a,.note,.step .card{border-radius:var(--r-stamp)}
+.step .num{border-radius:50%}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+a,button,summary,.side a,.jump a{transition:background-color 140ms ease,color 140ms ease,border-color 140ms ease}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (max-width:767px){.hero h1{font-size:28px;line-height:36px}.hero p.sub,.step .lead{font-size:20px;line-height:28px}.step{gap:12px;padding:32px 0}}
+@media print{body{font-size:14px;line-height:20px}}
+@media (min-width:961px){#rb-change{display:none}}
+a.inl,a.ln{color:#B74C2C;text-decoration:underline;text-underline-offset:2px}
+
+/* pdf chooser */
+.pdfwrap{position:relative;display:inline-block;margin-left:0}
+.pdfwrap>summary{list-style:none;cursor:pointer;display:inline-block}
+.pdfwrap>summary::-webkit-details-marker{display:none}
+.pdfmenu{position:absolute;right:0;top:calc(100% + 8px);z-index:40;background:#101E30;border:1px solid #E3DCCB;border-radius:6px;box-shadow:0 12px 28px rgba(10,20,32,.18);min-width:230px;padding:6px}
+.pdfmenu a{display:block;padding:11px 14px;font-family:var(--sans);font-weight:600;font-size:15px;color:#1C2B3A;text-decoration:none;border-radius:4px}
+.pdfmenu a:hover,.pdfmenu a:focus-visible{background:#16263A;color:#8A6A1F}
+.foot .tg-link{display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.foot .tg-link svg{flex:0 0 auto}
+figure.shot.narrow{max-width:560px}
+figure.shot.narrow img{max-width:100%}
+@media (max-width:767px){.pdfmenu{right:auto;left:0}}
+
+@media (max-width:559px){
+ .top{display:flex;flex-wrap:wrap;row-gap:10px;align-items:center}
+ .top .brand{flex:1 1 100%}
+ .top .cta{display:flex;flex-wrap:wrap;gap:8px;width:100%}
+ .top .pdfwrap{margin-left:auto}
+ .pdfmenu{left:auto;right:0;min-width:210px;max-width:calc(100vw - 32px)}
+}
+
+.routebar.on{position:sticky;top:0;z-index:30;box-shadow:0 8px 18px rgba(14,27,44,.07)}
+.note{background:#132234;border-left:3px solid var(--gold-deep);padding:12px 14px;font-size:15px;line-height:1.5;color:var(--ink);margin:14px 0}
+@media (max-width:900px){.jump{position:static!important}}
+@media (max-width:559px){.jump-in{padding:0 12px}.routebar{padding:10px 12px}.routebar button{white-space:nowrap}}
+
+@media (max-width:559px){
+ .top-in{flex-wrap:wrap!important;row-gap:8px}
+ .pdfwrap{margin-left:auto}
+ .pdfmenu{left:auto;right:0}
+ .brand small{display:none}
+}
+
+.top .cta-head{margin-left:auto;background:var(--gold);color:#20180A;border:1px solid var(--gold);border-radius:3px;padding:12px 16px;font-family:var(--sans);font-weight:700;font-size:15px;text-decoration:none;line-height:1.2;max-width:330px}
+.top .cta-head:hover{background:#E2B65F;color:#20180A}
+.top .tg{margin-left:0}
+@media(max-width:720px){.top .cta-head{width:100%;text-align:center;max-width:none}}
+
+/* DARK-KIT v2: перабіваем глабальныя зменныя сайта */
+html{--panel:#0B1624 !important;--ink:#EDE7DA !important;--card:#101E30 !important;--line:rgba(198,155,60,.28) !important}
+html body{background:#0B1624 !important;color:#EDE7DA !important}
+body .top{background:#0E1B2C !important;color:#EDE7DA !important;border-bottom:1px solid rgba(198,155,60,.3) !important}
+body .top b,body .top small,body .top .brand-t b{color:#EDE7DA !important}
+body .wrap,body .shell,body .main{background:transparent !important;color:#EDE7DA !important}
+body .step,body .note,body .card,body .choose button,body .tocm,body .pdfmenu,body details{background:#101E30 !important;color:#EDE7DA !important;border-color:rgba(198,155,60,.28) !important}
+body .step h2,body .step h3,body h1,body h2,body h3,body b,body strong{color:#EDE7DA !important}
+body p,body li,body td,body th{color:#DCD5C6 !important}
+body .muted,body small,body .lead{color:#93A1B0 !important}
+body a{color:#E8C06A !important}
+body .top .cta-head{background:#C69B3C !important;color:#20180A !important;border-color:#C69B3C !important;font-weight:700 !important}
+body .top .cta-head:hover{background:#E8C06A !important;color:#20180A !important}
+body .side a:hover,body .side a.act{background:#16263A !important;color:#EDE7DA !important}
+body #zakaz{background:#101E30 !important;border:1px solid rgba(198,155,60,.3) !important}
+body img{background:#0E1B2C !important}
+
+/* NO-WIDOWS v1 */
+h1,h2,h3,h4,summary,.cta-head,.choose button,.step h2,.step h3{text-wrap:balance;hyphens:none}
+p,li,td,th,.lead,.note p{text-wrap:pretty;hyphens:none}
+.top .cta-head{white-space:nowrap;font-size:14px;letter-spacing:0}
+@media (max-width:520px){.top .cta-head{white-space:normal;font-size:13px;max-width:100%}}
+
+/* NO-WIDOWS v2: бакавыя спасылкі і змест */
+.side a,.side a span,.tocm a,.tocm-in a,.side .switch button,nav a{text-wrap:balance;hyphens:none;overflow-wrap:break-word}
+
+/* NO-WIDOWS v3: мабільныя дробязі */
+@media (max-width:600px){
+ .side a,.side a span{font-size:13px;line-height:1.3;text-wrap:pretty}
+ .side a{padding-right:2px}
+ .choose button,.step li,.step p{text-wrap:pretty}
+ .step li{text-indent:-0.1px}
+}
+</style>
+<link rel="stylesheet" href="brand.css">
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <span class="mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="26" height="26" role="img"><rect width="32" height="32" rx="6" fill="#0E1B2C"/><polygon points="16,6 26,16 16,26 6,16" fill="#C69B3C"/></svg></span>
+  <span class="brand-t"><b>Arkkona Biuro</b><small>biuro rachunkowe · JDG по&nbsp;всей Польше</small></span>
+  <a class="cta-head" href="#zakaz">Заполнить анкету – подадим бесплатно</a> </div></header>
+
+<div class="shell" id="shell">
+<nav class="side" id="side" aria-label="Шаги"></nav>
+<div class="main">
+<div class="routebar" id="routebar"><span id="rb-label"></span><button type="button" id="rb-change">Сменить маршрут</button></div>
+<nav class="jump" id="jump" aria-label="Шаги"><div class="jump-in"></div></nav>
+<div class="hero" id="hero">
+  <h1>Wakacje składkowe: заявление RWS в&nbsp;eZUS</h1>
+  <p class="sub">Один месяц без взносов на&nbsp;социальное страхование. Дальше проведём вас по&nbsp;шагам. Всё, что нужно,&nbsp;– на&nbsp;экране или в&nbsp;подсказке.</p>
+  <div class="choose">
+    <button class="pri" onclick="setRoute('first')"><b>Подаю впервые</b><span>Первый раз в&nbsp;этом году. Начинаем с&nbsp;вида заявления.</span></button>
+    <button onclick="setRoute('repeat')"><b>Подаю повторно</b><span>Заявление уже подавали ранее&nbsp;– сначала справка из&nbsp;SUDOP.</span></button>
+  </div>
+  <p class="ask">Не&nbsp;нашли свой экран или что-то не&nbsp;сходится&nbsp;– напишите в&nbsp;Telegram: <a href="https://t.me/KorneVa_OK" target="_blank" rel="noopener">@KorneVa_OK</a>. Ответим по&nbsp;вашему шагу.</p>
+</div>
+
+<details class="tocm" id="tocm"><summary>Содержание</summary><div id="tocm-in"></div></details>
+
+<section class="step pre" id="login-ezus" data-id="login-ezus" data-r="first repeat">
+  <div class="num" aria-hidden="true">0</div>
+  <div class="body"><h2>Вход в&nbsp;eZUS</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Zaloguj do PUE/eZUS»</span></p><p class="lead">Открываем кабинет на&nbsp;<a href="https://www.zus.pl/" target="_blank" rel="noopener">zus.pl</a>&nbsp;– дальше все экраны внутри него.</p><ol class="do"><li>На <a href="https://www.zus.pl/" target="_blank" rel="noopener">zus.pl</a> нажать «Zaloguj do PUE/eZUS».</li><li>Войти через Profil Zaufany или банк. Ольга советует eZUS как самый простой способ – он первый в списке.</li><li>В меню выбрать «Katalog usług» → «Wakacje składkowe».</li></ol><figure class="shot"><img src="img/login-ezus-0.webp" alt="Вход в&nbsp;eZUS&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 0.1:</b> кнопка «Zaloguj do PUE/eZUS» на&nbsp;главной <a href="https://www.zus.pl/" target="_blank" rel="noopener">zus.pl</a>&nbsp;– это вход в&nbsp;кабинет.</figcaption></figure><figure class="shot"><img src="img/login-ezus-1.webp" alt="Вход в&nbsp;eZUS&nbsp;– экран 2" loading="lazy"><figcaption><b>Шаг 0.2:</b> вход через Profil Zaufany или банк. Логин и&nbsp;пароль eZUS&nbsp;– только если кабинет уже заведен.</figcaption></figure><figure class="shot"><img src="img/wniosek-catalog-0.webp" alt="Каталог услуг eZUS с&nbsp;пунктом Wakacje składkowe" loading="lazy"><figcaption><b>Шаг 0.3:</b> в&nbsp;кабинете открыть «Katalog usług» и&nbsp;найти «Wakacje składkowe»&nbsp;– это и&nbsp;есть заявление RWS.</figcaption></figure></div>
+</section><section class="step" id="wniosek" data-id="wniosek" data-r="first repeat">
+  <div class="num" aria-hidden="true">1</div>
+  <div class="body"><h2>Общие данные и&nbsp;вид заявления</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Informacje ogólne i wybór rodzaju wniosku»</span></p><p class="lead">Здесь выбираем, что именно подаем&nbsp;– RWS.</p><ol class="do"><li>Rodzaj wniosku: «Wniosek».</li><li>Нажать «Dalej».</li></ol><figure class="shot"><img src="img/wniosek-0.webp" alt="Wakacje składkowe – карточка услуги RWS" loading="lazy"><figcaption><b>Шаг 1.1:</b> на&nbsp;карточке прямо написано, что подаём&nbsp;– wzór <b>RWS</b> (wniosek o zwolnienie z&nbsp;obowiązku opłacenia składek za wskazany miesiąc). Жмём «Przejdź do usługi».</figcaption></figure><figure class="shot"><img src="img/wniosek-1.webp" alt="Общие данные и&nbsp;вид заявления&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 1.2:</b> «Rodzaj wniosku»&nbsp;– выбираем «Wniosek» и&nbsp;жмем «Dalej»&nbsp;– год здесь не&nbsp;выбирается.</figcaption></figure></div>
+</section><section class="step" id="platnik" data-id="platnik" data-r="first repeat">
+  <div class="num" aria-hidden="true">2</div>
+  <div class="body"><h2>Данные плательщика</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Dane płatnika»</span></p><p class="lead">Данные подставятся сами&nbsp;– их нужно только сверить.</p><ol class="do"><li>Сверить NIP, PESEL, имя и&nbsp;фамилию&nbsp;– или ввести NIP, имя либо фамилию вручную.</li><li>Телефон&nbsp;– необязательное поле: можно оставить пустым.</li><li>Нажать «Dalej».</li></ol><figure class="shot"><img src="img/platnik-0.webp" alt="Данные плательщика&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 2:</b> NIP, PESEL, имя и&nbsp;фамилия подставятся сами&nbsp;– сверяем с&nbsp;документами.</figcaption></figure></div>
+</section><section class="step" id="miesiac" data-id="miesiac" data-r="first repeat">
+  <div class="num" aria-hidden="true">3</div>
+  <div class="body"><h2>Месяц заявления</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Treść wniosku»</span></p><p class="lead">Поле месяца уже заполнено: месяц уже выбран – сверяем его с тем, за который просим каникулы.</p><ol class="do"><li>Сверить месяц и&nbsp;год.</li><li>Ничего не&nbsp;менять&nbsp;– жмем «Dalej».</li></ol><figure class="shot"><img src="img/miesiac-0.webp" alt="Месяц заявления&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 3:</b> поле месяца уже заполнено – сверяем месяц и год, ничего не меняем.</figcaption></figure></div>
+</section><section class="step" id="oswiadczenia" data-id="oswiadczenia" data-r="first repeat">
+  <div class="num" aria-hidden="true">4</div>
+  <div class="body"><h2>Заявления-подтверждения</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Oświadczenia»</span></p><p class="lead">Первые два пункта система отмечает сама&nbsp;– это текст, а&nbsp;не&nbsp;выбор. Вам нужны два ответа о&nbsp;вашей ситуации.</p><ol class="do"><li>Прочитать оба пункта вверху&nbsp;– галочек там нет.</li><li>В двух местах ниже выбрать вариант под свою ситуацию.</li><li>«Dalej».</li></ol><figure class="shot"><img src="img/oswiadczenia-0.webp" alt="Заявления-подтверждения&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 4:</b> два блока с&nbsp;выбором&nbsp;– ответ под свою ситуацию; пункты 1 и&nbsp;2 система проставляет сама.</figcaption></figure></div>
+</section><section class="step" id="dm1" data-id="dm1" data-r="first repeat">
+  <div class="num" aria-hidden="true">5</div>
+  <div class="body"><h2>de minimis, часть 1: размер и&nbsp;PKD</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Wielkość podmiotu i klasa działalności»</span></p><p class="lead">Здесь только размер предприятия и&nbsp;код деятельности.</p><ol class="do"><li>Wielkość podmiotu: «mikroprzedsiębiorca», если у&nbsp;вас микропредприятие.</li><li>Klasa działalności: выбрать год и&nbsp;вписать код PKD без точек&nbsp;– например 6210B. Если помощь de minimis уже получали, здесь же вписываем сумму из&nbsp;отчёта SUDOP&nbsp;– в&nbsp;евро, ровно как в&nbsp;документе (например, 200,47).</li><li>«Dalej».</li></ol><figure class="shot"><img src="img/dm1-0.webp" alt="de minimis, часть 1: размер и&nbsp;PKD&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 5.1:</b> «Wielkość podmiotu»&nbsp;– выбираем «mikroprzedsiębiorca».</figcaption></figure><figure class="shot"><img src="img/dm1-1.webp" alt="de minimis, часть 1: размер и&nbsp;PKD&nbsp;– экран 2" loading="lazy"><figcaption><b>Шаг 5.2:</b> «Klasa działalności»&nbsp;– год и&nbsp;код PKD без точек, например 6210B.</figcaption></figure></div>
+</section><section class="step" id="dm2" data-id="dm2" data-r="first repeat">
+  <div class="num" aria-hidden="true">6</div>
+  <div class="body"><h2>de minimis, часть 2: связи с&nbsp;фирмами</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Powiązania z innymi przedsiębiorcami»</span></p><p class="lead">Пять условий a–e: есть&nbsp;ли у&nbsp;вас связи с&nbsp;другими предпринимателями.</p><ol class="do"><li>a. один предприниматель имеет большинство голосов у&nbsp;другого.</li><li>b. право назначить или отозвать большинство органа управления.</li><li>c. право доминирующего влияния по&nbsp;договору или уставу.</li><li>d. самостоятельный контроль большинства голосов по&nbsp;соглашению.</li><li>e. связь через третье лицо.</li><li>Если связей нет&nbsp;– в&nbsp;каждом из&nbsp;пяти пунктов a–e отмечаем «NIE». Если есть&nbsp;– «TAK». «Dalej».</li></ol><figure class="shot"><img src="img/dm2-0.webp" alt="de minimis, часть 2: связи с&nbsp;фирмами&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 6:</b> «Powiązania z innymi przedsiębiorcami»&nbsp;– пять условий a–e, на&nbsp;каждое «TAK» или «NIE».</figcaption></figure></div>
+</section><section class="step" id="dm3" data-id="dm3" data-r="first repeat">
+  <div class="num" aria-hidden="true">7</div>
+  <div class="body"><h2>de minimis, часть 3: как возникла фирма</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Informacje o powstaniu podmiotu»</span></p><p class="lead">Четыре вопроса о&nbsp;том, как появилась ваша фирма.</p><ol class="do"><li>a. powstał wskutek połączenia&nbsp;– создана при слиянии.</li><li>b. przejął innego przedsiębiorcę&nbsp;– приняла другого предпринимателя.</li><li>c. powstał w wyniku podziału&nbsp;– создана при разделении.</li><li>d. powstał w wyniku przekształcenia&nbsp;– создана при преобразовании.</li><li>У большинства везде «NIE». «Dalej».</li></ol><figure class="shot"><img src="img/dm3-0.webp" alt="de minimis, часть 3: как возникла фирма&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 7:</b> «Informacje o powstaniu podmiotu»&nbsp;– как возникла фирма, четыре пункта a–d.</figcaption></figure></div>
+</section><section class="step" id="dm4" data-id="dm4" data-r="first repeat">
+  <div class="num" aria-hidden="true">8</div>
+  <div class="body"><h2>de minimis, часть 4: секторы деятельности</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Działalność gospodarcza»</span></p><p class="lead">Четыре вопроса о&nbsp;секторах, в&nbsp;которых работает фирма.</p><ol class="do"><li>a. рыболовство и&nbsp;аквакультура.</li><li>b. сельхозпродукция из&nbsp;приложения I к&nbsp;Договору о&nbsp;ЕС.</li><li>c. переработка и&nbsp;продажа сельхозпродукции.</li><li>d. переработка и&nbsp;продажа рыбной продукции.</li><li>Обычно везде «NIE». «Dalej».</li></ol><figure class="shot"><img src="img/dm4-0.webp" alt="de minimis, часть 4: секторы деятельности&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 8:</b> «Działalność gospodarcza»&nbsp;– четыре сектора a–d, на&nbsp;каждый «TAK» или «NIE».</figcaption></figure></div>
+</section><section class="step" id="zalaczniki" data-id="zalaczniki" data-r="repeat">
+  <div class="num" aria-hidden="true">9</div>
+  <div class="body"><h2>Приложения: PDF из SUDOP, если попросят</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Załączniki»</span></p><p class="lead">Повторная подача: справка SUDOP теперь не&nbsp;обязательна. Если ZUS её&nbsp;запросит – загружаем PDF, который скачали в&nbsp;Д2. Если нет – оставляем список пустым и&nbsp;жмём «Dalej». Лимит eZUS – около 1 МБ на файл и 5 МБ на всё заявление: если PDF не проходит, сожмите его.</p><ol class="do"><li>Нажать на&nbsp;пунктирную зону загрузки.</li><li>Если файл нужен: выбрать PDF из&nbsp;SUDOP и&nbsp;нажать «Otwórz».</li><li>Проверить имя файла в&nbsp;списке.</li><li>«Dalej».</li></ol><figure class="shot"><img src="img/zalaczniki-0.webp" alt="Приложения: PDF из SUDOP, если попросят&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 9.1:</b> пунктирная зона&nbsp;– сюда загружаем PDF из&nbsp;SUDOP.</figcaption></figure><figure class="shot"><img src="img/zalaczniki-1.webp" alt="Приложения: PDF из SUDOP, если попросят&nbsp;– экран 2" loading="lazy"><figcaption><b>Шаг 9.2:</b> имя файла в&nbsp;списке (по умолчанию przypadki_pomocy_beneficjenta.pdf)&nbsp;– проверяем и&nbsp;жмём «Otwórz».</figcaption></figure></div>
+</section><section class="step" id="zalaczniki-b" data-id="zalaczniki-b" data-r="first">
+  <div class="num" aria-hidden="true">9</div>
+  <div class="body"><h2>Приложения: пусто</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Załączniki»</span></p><p class="lead">Первая подача: список файлов пустой&nbsp;– так и&nbsp;должно быть.</p><ol class="do"><li>Ничего не&nbsp;добавлять.</li><li>«Dalej».</li></ol><figure class="shot"><img src="img/zalaczniki-a-0.webp" alt="Приложения: пусто&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 9:</b> список пустой&nbsp;– так и&nbsp;должно быть.</figcaption></figure></div>
+</section><section class="step" id="podsumowanie" data-id="podsumowanie" data-r="first repeat">
+  <div class="num" aria-hidden="true">10</div>
+  <div class="body"><h2>Итог</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Podsumowanie»</span></p><p class="lead">Всё заявление на&nbsp;одном экране&nbsp;– читаем и&nbsp;отправляем. Последняя страница называется «Widok danych dokumentu».</p><ol class="do"><li>Проверить месяц и&nbsp;данные.</li><li>Нажать «Podpisz i wyślij».</li></ol><figure class="shot" data-only="repeat"><img src="img/podsumowanie-0.webp" alt="Итог&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 10:</b> всё заявление на&nbsp;одном экране&nbsp;– сверяем данные и&nbsp;дату, затем «Podpisz i wyślij»&nbsp;– месяц проверяем выше, в&nbsp;«Treść wniosku».</figcaption></figure><p class="note" data-only="first">Для первой подачи сводка выглядит так&nbsp;же, только в&nbsp;«Załączniki» пусто.</p></div>
+</section><section class="step" id="podpis" data-id="podpis" data-r="first repeat">
+  <div class="num" aria-hidden="true">11</div>
+  <div class="body"><h2>Подпись и&nbsp;UPO</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Podpis i UPO»</span></p><p class="lead">Подпись и&nbsp;подтверждение, что заявление ушло.</p><ol class="do"><li>Подписать через Profil Zaufany.</li><li>Скачать UPO и&nbsp;сохранить.</li></ol><figure class="shot narrow"><img src="img/podpis-0.webp" alt="Подпись и&nbsp;UPO&nbsp;– экран 1" loading="lazy"><figcaption><b>Шаг 11:</b> в&nbsp;окне «Wybierz metodę podpisu» отмечаем «podpis zaufany (PZ)» и&nbsp;жмём «Podpisz».</figcaption></figure></div>
+</section>
+<section class="step pre" id="sudop-1" data-id="sudop-1" data-r="repeat">
+  <div class="num" aria-hidden="true">Д1</div>
+  <div class="body"><h2>Справка из&nbsp;SUDOP</h2><div class="note" style="border-left:3px solid #C69B3C"><p><b>Статус на октябрь 2026:</b> Ольга сообщила, что при повторной подаче справка из SUDOP больше не требуется – прикладываем её, только если ZUS попросит. Порядок ниже оставлен на случай такого запроса.</p></div><p class="screen">Экран в&nbsp;SUDOP: <span lang="pl">«Wyszukiwanie podmiotu»</span></p><p class="lead">Нужна тем, кто уже получал помощь de minimis.</p><ol class="do"><li>Открыть поиск в&nbsp;SUDOP по&nbsp;NIP: <a href="https://sudop.uokik.gov.pl/search/aidBeneficiary" target="_blank" rel="noopener">sudop.uokik.gov.pl/search/aidBeneficiary</a></li><li>Ввести NIP и&nbsp;нажать «Pobierz nazwę».</li><li>Отметить «tylko de minimis» и&nbsp;период 3 года.</li></ol><figure class="shot"><img src="img/sudop-1-0.webp" alt="Справка из&nbsp;SUDOP&nbsp;– экран 1" loading="lazy"><figcaption><b>Д1.1:</b> поиск по&nbsp;NIP&nbsp;– вводим свой NIP и&nbsp;жмем «Pobierz nazwę».</figcaption></figure><figure class="shot"><img src="img/sudop-1-1.webp" alt="Справка из&nbsp;SUDOP&nbsp;– экран 2" loading="lazy"><figcaption><b>Д1.2:</b> «3 lata wstecz» подставит даты; галочку «tylko de minimis» ставим сами&nbsp;– на&nbsp;экране она ещё не&nbsp;отмечена.</figcaption></figure></div>
+</section>
+<section class="step pre" id="sudop-2" data-id="sudop-2" data-r="repeat">
+  <div class="num" aria-hidden="true">Д2</div>
+  <div class="body"><h2>отчет в&nbsp;PDF</h2><p class="screen">Экран в&nbsp;eZUS: <span lang="pl">«Wyniki wyszukiwania»</span></p><p class="lead">Файл, который приложим позже&nbsp;– на&nbsp;шаге 9, в&nbsp;«Załączniki».</p><ol class="do"><li>Нажать «Wyszukaj według wybranych kryteriów».</li><li>Выбрать PDF и&nbsp;сохранить файл.</li></ol><figure class="shot"><img src="img/sudop-2-0.webp" alt="отчет в&nbsp;PDF&nbsp;– экран 1" loading="lazy"><figcaption><b>Д2:</b> выбираем PDF и&nbsp;жмем «Wyszukaj według wybranych kryteriów»&nbsp;– файл сохраняем: приложим его на&nbsp;шаге 9.</figcaption></figure></div>
+</section>
+
+<div class="note">
+  <h2>Если экран выглядит иначе</h2>
+  <p>Интерфейс eZUS иногда меняет подписи. Ориентируйтесь на&nbsp;смысл: шаг вперед&nbsp;– синяя кнопка справа внизу, возврат&nbsp;– «Wstecz», сохранение&nbsp;– «Zapisz i zamknij».</p>
+  <p>Если появился экран, которого нет в&nbsp;инструкции,&nbsp;– сделайте скриншот и&nbsp;пришлите в&nbsp;бюро.</p>
+</div>
+
+<div class="note">
+  <h2>Прямые ссылки</h2>
+  <ul class="links"><li><a href="https://www.zus.pl/" target="_blank" rel="noopener">ZUS&nbsp;– вход в&nbsp;eZUS</a><span>кнопка «Zaloguj do PUE/eZUS»</span></li><li><a href="https://biznes.gov.pl/pl/portal/ou710" target="_blank" rel="noopener">Wakacje składkowe&nbsp;– правила</a><span>biznes.gov.pl · ZUS</span></li><li><a href="https://sudop.uokik.gov.pl" target="_blank" rel="noopener">SUDOP&nbsp;– справка de minimis</a><span>сервис UOKiK, поиск по&nbsp;NIP</span></li><li><a href="https://login.gov.pl" target="_blank" rel="noopener">Profil Zaufany</a><span>вход и&nbsp;подпись заявления</span></li></ul>
+</div>
+
+<div class="note">
+  <h2>Что важно знать до&nbsp;начала</h2>
+  <ul>
+    <li>Заявление подается в&nbsp;месяц, предшествующий месяцу каникул.</li>
+    <li>Лимит помощи de minimis&nbsp;– 300 000 евро за&nbsp;три года.</li>
+    <li>Если уже получали помощь de&nbsp;minimis, отчёт SUDOP нужен только по&nbsp;запросу ZUS&nbsp;– порядок в&nbsp;Д1–Д2.</li>
+  </ul>
+</div>
+</div>
+</div>
+
+
+<section class="step" id="zakaz" style="scroll-margin-top:90px">
+<div class="num">Анкета</div>
+<div class="body">
+<h2>Инструкция закончилась – дальше 3 минуты, и заявление подадим за Вас</h2>
+<p>Если не хочется проходить eZUS самостоятельно: заполните анкету в боте, остальное сделает бюро. Это бесплатно – и заполнение, и сама подача.</p>
+<ul>
+<li>Отвечаете на несколько вопросов о фирме и месяце – без терминов ZUS.</li>
+<li>Готовим заявление RWS, подписываем и подаём в eZUS.</li>
+<li>Присылаем подтверждение (UPO) – у Вас остаётся документ, что заявление ушло.</li>
+</ul>
+<p><a href="https://t.me/ArkkonaBiuroBot?start=zayavka" style="display:inline-block;background:var(--gold);color:#20180A;font-weight:700;padding:14px 20px;border-radius:3px;text-decoration:none">Заполнить анкету в Telegram</a></p>
+<p class="ask">Уже заполняли – просто напишите в&nbsp;бот, напомним, на&nbsp;каком шаге остановились.</p>
+</div>
+</section>
+<footer class="foot" style="scroll-margin-top:90px"><div class="foot-in">
+  <div><p><b>Arkkona Biuro</b></p><p><a href="https://arkkonabiuro.pl">arkkonabiuro.pl</a></p></div>
+  <div><p>Подать за&nbsp;Вас: <a href="https://t.me/ArkkonaBiuroBot?start=zayavka">@ArkkonaBiuroBot</a></p><p>Вопрос: <a class="tg-link" href="https://t.me/KorneVa_OK"><svg class="tgi" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="#229ED9" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.6 8.2-1.9 9c-.1.6-.5.8-1 .5l-2.8-2-1.3 1.3c-.1.2-.3.3-.6.3l.2-2.9 5.3-4.8c.2-.2 0-.3-.4-.1l-6.6 4.1-2.8-.9c-.6-.2-.6-.6.1-.9l11-4.3c.5-.2 1 .1.8.7z"/></svg>@KorneVa_OK</a></p></div>
+  <small>Инструкция подготовлена для клиентов бюро и&nbsp;не&nbsp;является официальным документом ZUS. Официальные правила&nbsp;– на&nbsp;<a href="https://www.zus.pl/" target="_blank" rel="noopener">zus.pl</a>. Версия 5.0 · 22.10.2026.</small>
+</div></footer>
+<style>
+.ctafloat{position:fixed;left:0;right:0;bottom:0;z-index:36;background:#0E1B2C;border-top:1px solid #C69B3C;padding:10px 14px;display:flex;align-items:center;gap:14px;justify-content:center;transform:translateY(130%);transition:transform .35s ease;box-shadow:0 -8px 24px rgba(0,0,0,.35)}
+.ctafloat.on{transform:none}
+.ctafloat .t{color:#EDE7DA;font:600 15px/1.25 Montserrat,sans-serif}
+.ctafloat .t small{display:block;font:400 12px/1.3 Lora,serif;color:#B9C3D1}
+.ctafloat a{background:#C69B3C;color:#20180A;font:700 14px/1 Montserrat,sans-serif;padding:11px 16px;border-radius:3px;text-decoration:none;white-space:nowrap}
+@media(max-width:600px){.ctafloat .t small{display:none}.ctafloat .t{font-size:13px}.ctafloat{gap:10px;padding:9px 12px}}
+@media print{.ctafloat{display:none!important}}
+</style>
+<div class="ctafloat" id="ctafloat">
+  <div class="t">Не хотите разбираться сами?<small>Анкета 3 минуты – подадим за Вас бесплатно</small></div>
+  <a href="https://t.me/ArkkonaBiuroBot?start=zayavka">Заполнить анкету</a>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('ctafloat'), z=document.getElementById('zakaz');
+  function upd(){
+    var d=document.documentElement;
+    var near=(window.innerHeight+window.scrollY)>=(d.scrollHeight-1000);
+    var inz=false;
+    if(z){var r=z.getBoundingClientRect(); inz=r.top<window.innerHeight*0.4;}
+    b.classList.toggle('on', near && !inz);
+  }
+  addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
+})();
+</script>
+
+<script>
+const STEPS = [{"id": "login-ezus", "num": "0", "title": "Вход в&nbsp;eZUS", "routes": ["first", "repeat"]}, {"id": "wniosek", "num": "1", "title": "Общие данные и&nbsp;вид заявления", "routes": ["first", "repeat"]}, {"id": "platnik", "num": "2", "title": "Данные плательщика", "routes": ["first", "repeat"]}, {"id": "miesiac", "num": "3", "title": "Месяц заявления", "routes": ["first", "repeat"]}, {"id": "oswiadczenia", "num": "4", "title": "Заявления-подтверждения", "routes": ["first", "repeat"]}, {"id": "dm1", "num": "5", "title": "de minimis, часть 1: размер и&nbsp;PKD", "routes": ["first", "repeat"]}, {"id": "dm2", "num": "6", "title": "de minimis, часть 2: связи с&nbsp;фирмами", "routes": ["first", "repeat"]}, {"id": "dm3", "num": "7", "title": "de minimis, часть 3: как возникла фирма", "routes": ["first", "repeat"]}, {"id": "dm4", "num": "8", "title": "de minimis, часть 4: секторы деятельности", "routes": ["first", "repeat"]}, {"id": "zalaczniki", "num": "9", "title": "Приложения: PDF из SUDOP, если попросят", "routes": ["repeat"]}, {"id": "zalaczniki-b", "num": "9", "title": "Приложения: пусто", "routes": ["first"]}, {"id": "podsumowanie", "num": "10", "title": "Итог", "routes": ["first", "repeat"]}, {"id": "podpis", "num": "11", "title": "Подпись и&nbsp;UPO", "routes": ["first", "repeat"]}, {"id": "sudop-1", "num": "Д1", "title": "Справка из&nbsp;SUDOP", "routes": ["repeat"]}, {"id": "sudop-2", "num": "Д2", "title": "отчет в&nbsp;PDF", "routes": ["repeat"]}];
+const KEY = 'rws-route';
+
+function buildSide(route){
+  const side = document.getElementById('side');
+  const jump = document.getElementById('jump');
+  let items = STEPS.filter(s => s.routes.includes(route));
+  const link = (s) => `<a href="#${s.id}" data-to="${s.id}" class="${s.id.startsWith('sudop')||false?'prep':''}"><b>${s.num}</b><span>${s.title}</span></a>`;
+  side.innerHTML = `<p class="cap">${route==='first'?'Первая подача':'Повторная подача'}</p>` +
+    items.map(link).join('') +
+    `<div class="switch"><button onclick="setRoute(null)">Сменить маршрут</button></div>`;
+  jump.classList.add('on');
+  const rb=document.getElementById('routebar'); rb.classList.add('on');
+  document.getElementById('rb-label').textContent='Маршрут: '+(route==='repeat'?'подаю повторно':'подаю впервые');
+  jump.querySelector('.jump-in').innerHTML = items.map(s => `<a href="#${s.id}" data-to="${s.id}"><b>${s.num}</b><span>${s.title}</span></a>`).join('');
+  document.getElementById('tocm-in').innerHTML = items.map(link).join('');
+  side.classList.add('on'); document.getElementById('shell').classList.add('routed');
+}
+
+function setRoute(route){
+  const hero = document.getElementById('hero');
+  if(!route){ localStorage.removeItem(KEY); document.querySelectorAll('.step').forEach(s=>s.style.display='none'); document.getElementById('side').classList.remove('on'); document.getElementById('jump').classList.remove('on'); document.getElementById('routebar').classList.remove('on'); document.getElementById('shell').classList.remove('routed'); setActive(null); history.replaceState(null,'',location.pathname); hero.style.display=''; window.scrollTo({top:0,behavior:'smooth'}); return; }
+  localStorage.setItem(KEY, route);
+  buildSide(route);
+  document.querySelectorAll('.step').forEach(s => {
+    s.style.display = s.dataset.r.split(' ').includes(route) ? '' : 'none';
+  });
+  document.querySelectorAll('[data-only]').forEach(e => {
+    e.style.display = e.dataset.only.split(' ').includes(route) ? '' : 'none';
+  });
+  hero.style.display = 'none';
+  const first = STEPS.find(s => s.routes.includes(route) && s.id !== 'login-ezus');
+  history.replaceState(null,'', '#' + first.id);
+  const el = document.getElementById(first.id);
+  window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 60, behavior:'smooth'});
+  setActive(first.id);
+}
+
+function setActive(id){
+  document.querySelectorAll('.side a, .jump a').forEach(a => a.classList.toggle('act', a.dataset.to === id));
+  const side = document.getElementById('side');
+  const act = side.querySelector('a.act');
+  if(act && side.classList.contains('on')){
+    const sr = side.getBoundingClientRect(), ar = act.getBoundingClientRect();
+    if(ar.top < sr.top + 8 || ar.bottom > sr.bottom - 8){
+      side.scrollTop += (ar.top - sr.top) - sr.height/2 + ar.height/2;
+    }
+  }
+  const jump = document.getElementById('jump'), ja = jump.querySelector('a.act');
+  if(ja && jump.classList.contains('on')){
+    const jr = jump.getBoundingClientRect(), ar2 = ja.getBoundingClientRect();
+    if(ar2.left < jr.left || ar2.right > jr.right) jump.scrollLeft += (ar2.left - jr.left) - 40;
+  }
+}
+
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-to]'); if(!a) return;
+  setActive(a.dataset.to);
+});
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => { if(en.isIntersecting) setActive(en.target.id); });
+}, {rootMargin:'-45% 0px -45% 0px'});
+document.querySelectorAll('.step').forEach(s => io.observe(s));
+
+document.getElementById('rb-change').addEventListener('click',()=>{setRoute(null)});
+const tgBtn=document.getElementById('tg-share');
+if(tgBtn) tgBtn.addEventListener('click',()=>{
+  const url=location.origin+location.pathname+(location.hash||'');
+  const text=document.title+'&nbsp;– пошаговая инструкция';
+  window.open('https://t.me/share/url?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(text),'_blank','noopener');
+});
+(function init(){
+  document.querySelectorAll('.step').forEach(s => s.style.display = 'none');
+  if(window.innerWidth <= 960){ document.getElementById('jump').classList.remove('on'); }
+  const saved = localStorage.getItem(KEY);
+  if(saved === 'first' || saved === 'repeat'){ setRoute(saved); }
+})();
+</script>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Просмотр скриншота"><button class="x" type="button" aria-label="Закрыть">×</button></div>
+<script>(function(){var lb=document.getElementById('lb'),im=document.createElement('img');lb.appendChild(im);
+function open(s){im.src=s.currentSrc||s.src;im.alt=s.alt||'';lb.classList.add('on');document.body.style.overflow='hidden'}
+function close(){lb.classList.remove('on');document.body.style.overflow=''}
+document.addEventListener('click',function(e){var t=e.target;
+if(t.tagName==='IMG'&&t.closest('.shot'))open(t);
+if(lb.classList.contains('on')&&(t===lb||t.classList.contains('x')))close()},true);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close()})})();</script>
+</body></html>

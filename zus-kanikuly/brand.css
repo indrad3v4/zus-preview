@@ -1,0 +1,330 @@
+/* ============================================================================
+   ARKKONA · бренд-кит, наложенный на страницу инструкции ZUS
+   Только оформление. Тексты, разметка смысла и порядок шагов не меняются.
+   Источник значений — живой arkkonabiuro.pl (вычисленные стили, 23.10.2026)
+   и brand/arkkona-brand-kit-v3.md.
+   ========================================================================= */
+
+/* --- 1. Токены: те же роли, что на сайте -------------------------------- */
+:root{
+  --navy:#0E1B2C;            /* .css-14edst8 color / hero */
+  --navy-deep:#0A1420;       /* футер */
+  --paper:#F6F3EC;           /* .css-14edst8 background */
+  --panel:#F6F3EC;
+  --ink:#182230;
+  --muted:#5A6572;
+
+  /* На сайте акцент-заливка — #E2B65F (.btn-gold), а не каталожный #C69B3C.
+     Проверено контрастом: #E2B65F на #0E1B2C = 9.15:1 (заливка/текст на тёмном),
+     #E2B65F на бумаге = 1.71:1 → как ТЕКСТ на светлом запрещён. */
+  --gold:#E2B65F;            /* заливка, линии, декор */
+  --gold-deep:#8A6A1F;       /* единственный законный золотой текст на светлом: 5.05:1 */
+  --gold-soft:#EBDAB0;       /* шампань-заливка выделенного блока (.css-1ysk9xo) */
+  --gold-line:rgba(226,182,95,.45);
+  --line:#E3DCCB;
+
+  --r-sm:6px; --r-md:10px; --r-stamp:3px;
+  --sheet:0 1px 2px rgba(14,27,44,.04), 0 10px 28px -18px rgba(14,27,44,.22);
+  --memo:0 1px 2px rgba(14,27,44,.05), 0 18px 44px -22px rgba(14,27,44,.28);
+}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font:16px/24px var(--sans);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* --- 2. Шапка: бумага + ромб + Lora, как в живом хидере ---------------- */
+/* Сайт: .header-row{height:62px;padding:8px 0 6px}, логотип .css-1ic04fz —
+   8×8 золотой ромб (rotate 45deg) + слово Lora 16px; телефон .css-tahfv #E2B65F. */
+.top{
+  background:var(--paper);
+  color:var(--ink);
+  padding:0;
+  border-bottom:1px solid var(--line);
+}
+.top-in{
+  max-width:1200px;
+  padding:0 24px;
+  height:62px;
+  align-items:center;
+  gap:12px;
+  flex-wrap:nowrap;
+}
+.mark{align-self:center;display:flex;align-items:center}
+.mark .mark-d{
+  width:9px;height:9px;background:var(--gold);
+  transform:rotate(45deg);display:block;
+}
+.brand-t{line-height:1.2;gap:1px}
+.brand-t b{
+  font-family:Lora,Georgia,serif;font-weight:400;font-size:20px;line-height:28px;
+  letter-spacing:.01em;color:var(--ink);
+}
+.brand-t small{
+  font-family:var(--sans);font-size:14px;line-height:20px;font-weight:400;
+  letter-spacing:.02em;text-transform:none;opacity:1;color:var(--muted);
+}
+.top .tg{
+  border:1px solid var(--gold-deep);color:var(--gold-deep);
+  border-radius:var(--r-stamp);padding:13px 20px;
+  font:600 14px/20px var(--sans);letter-spacing:.04em;min-height:44px;
+}
+.top .tg:hover{background:var(--gold-deep);color:var(--paper);border-color:var(--gold-deep)}
+.top .pdf{
+  background:var(--gold);color:var(--navy);border:0;
+  border-radius:var(--r-stamp);padding:14px 26px;
+  font:600 14px/20px var(--sans);letter-spacing:.04em;
+  min-height:44px;display:inline-flex;align-items:center;justify-content:center;
+  box-shadow:var(--memo);
+}
+.top .pdf:hover{background:#B8903A;color:var(--navy)}
+
+/* --- 3. Каркас: одна ось, поля 24, ритм секций -------------------------- */
+.shell,.foot-in,.foot small,.top-in{max-width:1200px}
+.shell{padding:0 24px;gap:48px}
+.shell.routed{grid-template-columns:minmax(0,1fr) 300px}
+.main{padding-bottom:64px}
+.shell:not(.routed) .main{max-width:none}
+
+/* --- 4. Герой: Lora 400 + золотая линейка 26×2 -------------------------- */
+/* Сайт: h1 Lora 400 letter-spacing -.01em (.css-1t7e11l);
+   .css-1gfgv8f{width:26px;height:2px;background:#E2B65F} — подпись под заглавием. */
+.hero{padding:56px 0 4px}
+.hero h1{
+  font-size:40px;line-height:48px;font-weight:400;letter-spacing:-.01em;
+  color:var(--navy);margin:0 0 16px;text-wrap:balance;
+}
+.hero h1::after{
+  content:"";display:block;width:26px;height:2px;background:var(--gold);margin:20px 0 0;
+}
+.hero p.sub{
+  font-family:Lora,Georgia,serif;font-size:20px;line-height:28px;font-weight:400;
+  color:var(--ink);max-width:62ch;margin:0 0 22px;text-wrap:pretty;
+}
+
+/* Выбор маршрута: лист на столе, золотая закладка у главного варианта */
+.choose{gap:16px}
+.choose button{
+  position:relative;border:1px solid var(--line);border-radius:var(--r-md);
+  background:#fff;padding:24px;box-shadow:var(--sheet);
+  transition:box-shadow .15s ease,border-color .15s ease,transform .15s ease;
+}
+.choose button:hover{
+  background:#fff;border-color:var(--gold-deep);box-shadow:var(--memo);
+}
+.choose button.pri{border-color:var(--line);color:var(--ink)}
+.choose button.pri::before{
+  content:"";position:absolute;top:0;left:24px;width:64px;height:3px;background:var(--gold);
+}
+.choose button.pri:hover{background:#fff;border-color:var(--gold-deep)}
+.choose b{font:400 20px/28px Lora,serif;letter-spacing:-.01em;margin-bottom:6px}
+.choose span{font-size:14px;line-height:20px;color:var(--muted)}
+
+.ask{font-size:14px;line-height:20px;color:var(--muted);margin-top:20px}
+.ask a{
+  color:var(--gold-deep);font-weight:600;text-decoration:none;
+  border-bottom:1px solid var(--gold-line);
+}
+
+/* --- 5. Шаги: лист бумаги + номер в Lora вместо кружка ------------------ */
+/* Сайт: карточка .css-ghgerd{border:1px solid #E3DCCB;border-radius:10px;padding:24px};
+   номер .css-1rbfao2{Lora 28/36, #8A6A1F, tabular-nums} — это индекс, не бейдж. */
+.step{
+  display:flex;
+  gap:20px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--r-md);
+  padding:24px;
+  margin:0 0 20px;
+  box-shadow:var(--sheet);
+  scroll-margin-top:24px;
+}
+.step .num,
+.step.pre .num,
+.step.prep .num{
+  flex:0 0 auto;
+  width:46px;height:auto;
+  border-radius:0;background:none;
+  display:block;
+  color:var(--gold-deep);
+  font:400 28px/36px Lora,serif;
+  font-variant-numeric:tabular-nums;
+  text-align:left;
+  padding:1px 0 0;
+}
+.step .body{min-width:0;flex:1}
+.step h2{
+  font-family:Lora,Georgia,serif;font-weight:600;
+  font-size:28px;line-height:36px;letter-spacing:-.01em;
+  margin:0 0 4px;text-wrap:balance;color:var(--navy);
+}
+.step .screen{
+  font-family:Lora,Georgia,serif;font-style:italic;font-weight:400;
+  font-size:14px;line-height:20px;color:var(--muted);letter-spacing:.01em;margin:0 0 10px;
+}
+.step .lead{
+  font-family:Lora,Georgia,serif;font-weight:400;
+  font-size:20px;line-height:28px;color:var(--navy);
+  max-width:66ch;margin:0 0 16px;text-wrap:pretty;
+}
+.do{padding-left:22px;margin:0 0 20px}
+.do li{font-size:16px;line-height:24px;max-width:68ch;margin:0 0 8px}
+.do li::marker{
+  font-family:Lora,Georgia,serif;font-weight:600;color:var(--gold-deep);
+  font-variant-numeric:tabular-nums;
+}
+.do li:last-child{margin-bottom:0}
+
+/* --- 6. Скриншоты и подписи -------------------------------------------- */
+.shot{margin:0 0 20px}
+.shot:last-child{margin-bottom:0}
+.shot img{
+  border:1px solid var(--line);border-radius:var(--r-md);
+  box-shadow:var(--memo);
+  max-width:min(100%,680px);
+  /* Исходники приходят с белой вуалью (замер средней яркости кадра: 235–239/255,
+     σ 14–32). Правило возвращает контраст, не переписывая файл-доказательство. */
+  filter:contrast(1.12) saturate(1.06);
+}
+.shot img:hover{box-shadow:0 2px 4px rgba(14,27,44,.06),0 22px 50px -20px rgba(14,27,44,.34)}
+.shot figcaption{
+  font-size:14px;line-height:20px;color:var(--muted);
+  margin-top:10px;padding-left:12px;border-left:2px solid var(--gold-line);
+  text-wrap:pretty;
+}
+.shot figcaption b{color:var(--ink);font-weight:600}
+
+/* --- 7. Блоки-памятки --------------------------------------------------- */
+.note{
+  background:#fff;border:1px solid var(--line);border-left:1px solid var(--line);
+  border-radius:var(--r-md);padding:24px;margin:0 0 20px;box-shadow:var(--sheet);
+}
+.note h2{
+  font-family:Lora,Georgia,serif;font-weight:600;font-size:20px;line-height:28px;
+  color:var(--navy);margin:0 0 10px;
+}
+.note p,.note li{font-size:16px;line-height:24px;max-width:68ch}
+.note p:last-child{margin-bottom:0}
+/* Блок «Что важно знать до начала» — шампань-акцент, как .css-1ysk9xo на сайте */
+.note:last-of-type{
+  background:var(--gold-soft);border-color:var(--gold);
+}
+.note:last-of-type h2{color:var(--navy)}
+
+.links{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.links li{
+  border:0;border-bottom:1px solid var(--line);border-radius:0;background:none;
+  padding:12px 0;
+}
+.links li:last-child{border-bottom:0;padding-bottom:0}
+.links a{
+  font-weight:600;color:var(--gold-deep);font-size:16px;line-height:24px;
+  text-decoration:underline;text-decoration-color:var(--gold-line);text-underline-offset:3px;
+}
+.links a:hover{text-decoration:underline}
+.links span{font-size:14px;line-height:20px;color:var(--muted);margin-top:2px}
+
+/* --- 8. Боковой индекс -------------------------------------------------- */
+.side{padding:32px 0;gap:2px}
+.side .cap{
+  font-family:Lora,Georgia,serif;font-size:16px;line-height:24px;font-weight:400;
+  letter-spacing:0;text-transform:none;color:var(--muted);margin:0 0 12px;padding:0 12px;
+}
+.side a{
+  gap:10px;min-height:44px;border-radius:var(--r-sm);padding:8px 10px 8px 10px;
+  border-left:2px solid transparent;color:var(--muted);font-size:14px;line-height:20px;
+}
+.side a b{
+  display:inline-block;min-width:20px;height:auto;padding:0;border-radius:0;background:none;
+  color:var(--gold-deep);font:400 14px/20px Lora,serif;text-align:right;
+  font-variant-numeric:tabular-nums;
+}
+.side a:hover{background:#fff;color:var(--ink)}
+.side a.act{
+  background:#fff;color:var(--ink);font-weight:600;
+  border-left:2px solid var(--gold);box-shadow:var(--sheet);
+}
+.side a.act b{background:none;color:var(--gold-deep)}
+.side a.prep b{background:none;color:var(--gold-deep)}
+.side .switch{border-top:1px solid var(--line);padding-top:16px;margin:20px 10px 0}
+.side .switch button{
+  border:1px solid var(--line);border-radius:var(--r-stamp);padding:10px 12px;
+  min-height:44px;color:var(--ink);
+}
+.side .switch button:hover{border-color:var(--gold-deep);color:var(--gold-deep)}
+
+/* --- 9. Служебные полосы (маршрут, мобильный индекс) -------------------- */
+.routebar{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+  padding:12px 16px;margin:24px 0 12px;box-shadow:var(--sheet);
+}
+.routebar button{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold-line)}
+.jump{background:rgba(246,243,236,.97);border-bottom:1px solid var(--line);padding:12px 0}
+.jump a{
+  border:1px solid var(--line);border-radius:var(--r-stamp);padding:8px 12px;
+  background:#fff;min-height:40px;
+}
+.jump a b{
+  width:auto;height:auto;border-radius:0;background:none;color:var(--gold-deep);
+  font:400 14px/20px Lora,serif;font-variant-numeric:tabular-nums;
+}
+.jump a.act{border-color:var(--gold);background:#fff;color:var(--ink);font-weight:600}
+.tocm{border-radius:var(--r-md);box-shadow:var(--sheet)}
+.tocm a b{color:var(--gold-deep);font-family:Lora,serif}
+
+/* --- 10. Подвал: NAVY_DEEP + золотая линейка --------------------------- */
+.foot{
+  background:var(--navy-deep);color:#C9D2DC;
+  border-top:1px solid var(--gold-line);
+  padding:48px 0 32px;
+}
+.foot-in{padding:0 24px}
+.foot-in{gap:24px 40px}
+.foot b{font-family:Lora,Georgia,serif;font-weight:400;font-size:20px;line-height:28px;color:#fff}
+.foot p{margin:0 0 6px;font-size:14px;line-height:20px}
+.foot a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-line)}
+.foot a:hover{color:#fff;border-bottom-color:var(--gold)}
+.foot small{
+  display:block;max-width:1200px;margin:24px auto 0;padding:18px 24px 0;font-size:14px;line-height:20px;
+  color:#A9B4C0;opacity:1;border-top:1px solid rgba(255,255,255,.10);padding-top:18px;
+}
+
+/* --- 11. Фокус и движение (канон кита) ---------------------------------- */
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{
+  outline:2px solid var(--gold-deep);outline-offset:2px;border-radius:var(--r-stamp);
+}
+a,button,summary,.side a,.jump a,.choose button{
+  transition:background-color 140ms ease,color 140ms ease,border-color 140ms ease,box-shadow 140ms ease;
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* --- 12. Адаптив: тот же ритм, другой кегль ---------------------------- */
+@media (max-width:960px){
+  .top{padding:0}
+  .top-in{height:58px;gap:10px;padding:0 16px}
+  .brand-t small{display:none}
+  .shell{padding:0 16px}
+  .hero{padding:32px 0 4px}
+  .hero h1{font-size:28px;line-height:36px}
+  .hero p.sub{font-size:20px;line-height:28px}
+  .step{padding:20px;gap:14px}
+  .step .num{width:38px;font-size:28px;line-height:36px}
+  .step h2{font-size:28px;line-height:36px}
+  .foot{padding:36px 0 24px}
+  .foot-in{padding:0 16px}
+  .foot small{padding-left:16px;padding-right:16px}
+}
+
+/* --- 13. Печать: карточки не нужны, остаётся типографика --------------- */
+@media print{
+  body{background:#fff}
+  .step,.note,.routebar,.jump,.choose button{background:#fff!important;box-shadow:none!important;border-color:#bbb!important}
+  .step{padding:12pt 0!important;border:0!important;border-bottom:1px solid #ddd!important;border-radius:0!important;break-inside:avoid}
+  .step .num{color:#000!important}
+  .note:last-of-type{background:#fff!important}
+  .foot{background:#fff!important;color:#333!important;border-top:1pt solid #999!important}
+  .foot b,.foot a{color:#000!important}
+}
