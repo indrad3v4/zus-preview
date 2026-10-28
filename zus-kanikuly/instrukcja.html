@@ -446,10 +446,19 @@ document.addEventListener('click', e => {
   setActive(a.dataset.to);
 });
 
-const io = new IntersectionObserver(entries => {
-  entries.forEach(en => { if(en.isIntersecting) setActive(en.target.id); });
-}, {rootMargin:'-45% 0px -45% 0px'});
-document.querySelectorAll('.step').forEach(s => io.observe(s));
+function activeByScroll(){
+  const secs = [...document.querySelectorAll('.step')].filter(s => getComputedStyle(s).display !== 'none');
+  if(!secs.length) return;
+  const line = window.scrollY + window.innerHeight * 0.35;
+  let cur = secs[0].id;
+  for(const s of secs){ if(s.getBoundingClientRect().top + window.scrollY <= line) cur = s.id; }
+  if(window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) cur = secs[secs.length-1].id;
+  setActive(cur);
+}
+let rafPending = false;
+addEventListener('scroll', () => { if(rafPending) return; rafPending = true; requestAnimationFrame(() => { rafPending = false; activeByScroll(); }); }, {passive:true});
+addEventListener('resize', activeByScroll);
+setTimeout(activeByScroll, 200);
 
 document.getElementById('rb-change').addEventListener('click',()=>{setRoute(null)});
 const tgBtn=document.getElementById('tg-share');
