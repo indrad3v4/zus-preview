@@ -521,4 +521,19 @@ a.cta-head{min-height:44px!important;display:inline-flex!important;align-items:c
 #jump a{min-height:44px!important;display:inline-flex!important;align-items:center!important}
 @media (max-width:600px){body{padding-bottom:96px!important}footer{padding-bottom:18px!important}}
 </style>
+<script>
+/* ссылка на раздел Д1 из шага 5: если раздел скрыт маршрутом «первый раз», переключаем маршрут и ведём туда */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href="#sudop-1"]');
+  if (!a) return;
+  var t = document.getElementById('sudop-1');
+  if (!t) return;
+  if (getComputedStyle(t).display === 'none') {
+    e.preventDefault();
+    try { localStorage.setItem('rws-route', 'repeat'); } catch (err) {}
+    if (window.setRoute) window.setRoute('repeat');
+    setTimeout(function () { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 80);
+  }
+});
+</script>
 </body></html>
