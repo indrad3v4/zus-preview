@@ -383,18 +383,19 @@ p,li,td,th,.lead,.note p{text-wrap:pretty;hyphens:none}
 </div>
 <script>
 (function(){
-  var t=document.querySelector('.top'); if(!t) return;
-  var last=window.scrollY||0;
-  function upd(){
-    var y=window.scrollY||0;
-    var max=document.documentElement.scrollHeight-window.innerHeight;
-    var end=Math.max(400,max-900);
-    if(y>=end){ t.classList.remove('hide'); t.classList.add('back'); }
-    else if(y<80 || y<last-6){ t.classList.remove('hide'); t.classList.remove('back'); }
-    else if(y>last+6){ t.classList.add('hide'); t.classList.remove('back'); }
-    last=y;
-  }
-  addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
+  var t=document.querySelector('.top'); if(!t||!('IntersectionObserver' in window)) return;
+  var foot=document.querySelector('.foot')||document.querySelector('.foot-cta');
+  var topSent=document.createElement('div');
+  topSent.setAttribute('aria-hidden','true');
+  topSent.style.cssText='position:absolute;top:0;left:0;width:1px;height:120px;pointer-events:none';
+  document.body.insertBefore(topSent,document.body.firstChild);
+  new IntersectionObserver(function(e){
+    if(e[0].isIntersecting){t.classList.remove('hide');t.classList.remove('back');}
+    else {t.classList.add('hide');t.classList.remove('back');}
+  },{threshold:0}).observe(topSent);
+  if(foot){ new IntersectionObserver(function(e){
+    if(e[0].isIntersecting){t.classList.remove('hide');t.classList.add('back');}
+  },{rootMargin:'0px 0px -120px 0px'}).observe(foot); }
 })();
 </script>
 
