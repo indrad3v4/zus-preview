@@ -27,9 +27,7 @@ body{margin:0;background:var(--panel);color:var(--ink);font:16px/1.55 var(--sans
 h1,h2,.brand{font-family:"Lora",Georgia,serif;font-weight:600;text-wrap:balance}
 p,li{text-wrap:pretty}
 a{color:inherit}
-.top{background:var(--navy);color:#fff;padding:18px 20px;position:sticky;top:0;z-index:45;transition:transform .28s ease,box-shadow .28s ease}
-.top.hide{transform:translateY(-103%);box-shadow:none}
-.top.back{box-shadow:0 8px 24px rgba(10,20,34,.28)}
+.top{background:var(--navy);color:#fff;padding:18px 20px}
 .foot-cta{max-width:1200px;margin:0 auto 22px;padding:20px 22px;background:var(--navy);border-radius:3px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:space-between}
 .foot-cta p{margin:0;color:#fff;font-family:var(--sans);font-size:17px;line-height:1.35}
 .foot-cta p b{color:var(--gold)}
@@ -361,6 +359,10 @@ p,li,td,th,.lead,.note p{text-wrap:pretty;hyphens:none}
 <p class="ask">Уже заполняли – просто напишите в&nbsp;бот, напомним, на&nbsp;каком шаге остановились.</p>
 </div>
 </section>
+<header class="top top-end"><div class="top-in">
+  <span class="mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="26" height="26" role="img"><rect width="32" height="32" rx="6" fill="#0E1B2C"/><polygon points="16,6 26,16 16,26 6,16" fill="#C69B3C"/></svg></span>
+  <span class="brand-t"><b>Arkkona Biuro</b><small>biuro rachunkowe · JDG по&nbsp;всей Польше</small></span>
+  <a class="cta-head" href="#zakaz">Заполнить анкету – подадим бесплатно</a> </div></header>
 <footer class="foot" style="scroll-margin-top:90px">
   <div class="foot-cta"><p><b>Инструкция закончилась.</b> Не хотите проходить eZUS сами? Анкета занимает 3 минуты – бюро подаст заявление за&nbsp;Вас бесплатно: и&nbsp;заполнение, и&nbsp;сама подача.</p><a href="https://t.me/ArkkonaBiuroBot?start=zayavka">Заполнить анкету – подадим бесплатно</a></div>
   <div class="foot-in">
@@ -381,24 +383,7 @@ p,li,td,th,.lead,.note p{text-wrap:pretty;hyphens:none}
   <div class="t">Не хотите разбираться сами?<small>Анкета 3 минуты – подадим за Вас бесплатно</small></div>
   <a href="https://t.me/ArkkonaBiuroBot?start=zayavka">Заполнить анкету</a>
 </div>
-<script>
-(function(){window.__zh='run';
-  var t=document.querySelector('.top'); if(!t||!('IntersectionObserver' in window)){window.__zh='skip';return;}
-  var foot=document.querySelector('.foot')||document.querySelector('.foot-cta');
-  var topSent=document.createElement('div');
-  topSent.setAttribute('aria-hidden','true');
-  topSent.style.cssText='position:absolute;top:0;left:0;width:1px;height:120px;pointer-events:none';
-  document.body.insertBefore(topSent,document.body.firstChild);
-  new IntersectionObserver(function(e){
-    if(e[0].isIntersecting){t.classList.remove('hide');t.classList.remove('back');}
-    else {t.classList.add('hide');t.classList.remove('back');}
-  },{threshold:0}).observe(topSent);
-  if(foot){ new IntersectionObserver(function(e){
-    if(e[0].isIntersecting){t.classList.remove('hide');t.classList.add('back');}
-  },{rootMargin:'0px 0px -120px 0px'}).observe(foot); }
-  window.__zh='ok';
-})();
-</script>
+
 
 <script>
 (function(){
