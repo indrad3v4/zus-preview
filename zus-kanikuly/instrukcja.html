@@ -27,7 +27,15 @@ body{margin:0;background:var(--panel);color:var(--ink);font:16px/1.55 var(--sans
 h1,h2,.brand{font-family:"Lora",Georgia,serif;font-weight:600;text-wrap:balance}
 p,li{text-wrap:pretty}
 a{color:inherit}
-.top{background:var(--navy);color:#fff;padding:18px 20px}
+.top{background:var(--navy);color:#fff;padding:18px 20px;position:sticky;top:0;z-index:45;transition:transform .28s ease,box-shadow .28s ease}
+.top.hide{transform:translateY(-103%);box-shadow:none}
+.top.back{box-shadow:0 8px 24px rgba(10,20,34,.28)}
+.foot-cta{max-width:1200px;margin:0 auto 22px;padding:20px 22px;background:var(--navy);border-radius:3px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:space-between}
+.foot-cta p{margin:0;color:#fff;font-family:var(--sans);font-size:17px;line-height:1.35}
+.foot-cta p b{color:var(--gold)}
+.foot-cta a{background:var(--gold);color:#20180A;text-decoration:none;font-family:var(--sans);font-weight:600;font-size:16px;padding:13px 20px;border-radius:3px;white-space:nowrap}
+.foot-cta a:hover{background:#fff}
+@media (max-width:640px){.foot-cta{padding:16px}.foot-cta a{width:100%;text-align:center}}
 .top-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .mark{display:inline-flex;align-items:center;line-height:0}
 .brand-t{display:flex;flex-direction:column;line-height:1.15}
@@ -353,10 +361,12 @@ p,li,td,th,.lead,.note p{text-wrap:pretty;hyphens:none}
 <p class="ask">Уже заполняли – просто напишите в&nbsp;бот, напомним, на&nbsp;каком шаге остановились.</p>
 </div>
 </section>
-<footer class="foot" style="scroll-margin-top:90px"><div class="foot-in">
+<footer class="foot" style="scroll-margin-top:90px">
+  <div class="foot-cta"><p><b>Инструкция закончилась.</b> Не хотите проходить eZUS сами? Анкета занимает 3 минуты – бюро подаст заявление за&nbsp;Вас бесплатно: и&nbsp;заполнение, и&nbsp;сама подача.</p><a href="https://t.me/ArkkonaBiuroBot?start=zayavka">Заполнить анкету – подадим бесплатно</a></div>
+  <div class="foot-in">
   <div><p><b>Arkkona Biuro</b></p><p><a href="https://arkkonabiuro.pl">arkkonabiuro.pl</a></p></div>
   <div><p>Подать за&nbsp;Вас: <a href="https://t.me/ArkkonaBiuroBot?start=zayavka">@ArkkonaBiuroBot</a></p><p>Вопрос: <a class="tg-link" href="https://t.me/KorneVa_OK"><svg class="tgi" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="#229ED9" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.6 8.2-1.9 9c-.1.6-.5.8-1 .5l-2.8-2-1.3 1.3c-.1.2-.3.3-.6.3l.2-2.9 5.3-4.8c.2-.2 0-.3-.4-.1l-6.6 4.1-2.8-.9c-.6-.2-.6-.6.1-.9l11-4.3c.5-.2 1 .1.8.7z"/></svg>@KorneVa_OK</a></p></div>
-  <small>Инструкция подготовлена для клиентов бюро и&nbsp;не&nbsp;является официальным документом ZUS. Официальные правила&nbsp;– на&nbsp;<a href="https://www.zus.pl/" target="_blank" rel="noopener">zus.pl</a>. Версия 5.0 · 22.10.2026.</small>
+  <small>Инструкция подготовлена для клиентов бюро и&nbsp;не&nbsp;является официальным документом ZUS. Официальные правила&nbsp;– на&nbsp;<a href="https://www.zus.pl/" target="_blank" rel="noopener">zus.pl</a>. Версия 5.1 · 28.10.2026.</small>
 </div></footer>
 <style>
 .ctafloat{position:fixed;left:0;right:0;bottom:0;z-index:36;background:#0E1B2C;border-top:1px solid #C69B3C;padding:10px 14px;display:flex;align-items:center;gap:14px;justify-content:center;transform:translateY(130%);transition:transform .35s ease;box-shadow:0 -8px 24px rgba(0,0,0,.35)}
@@ -371,6 +381,23 @@ p,li,td,th,.lead,.note p{text-wrap:pretty;hyphens:none}
   <div class="t">Не хотите разбираться сами?<small>Анкета 3 минуты – подадим за Вас бесплатно</small></div>
   <a href="https://t.me/ArkkonaBiuroBot?start=zayavka">Заполнить анкету</a>
 </div>
+<script>
+(function(){
+  var t=document.querySelector('.top'); if(!t) return;
+  var last=window.scrollY||0;
+  function upd(){
+    var y=window.scrollY||0;
+    var max=document.documentElement.scrollHeight-window.innerHeight;
+    var end=Math.max(400,max-900);
+    if(y>=end){ t.classList.remove('hide'); t.classList.add('back'); }
+    else if(y<80 || y<last-6){ t.classList.remove('hide'); t.classList.remove('back'); }
+    else if(y>last+6){ t.classList.add('hide'); t.classList.remove('back'); }
+    last=y;
+  }
+  addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
+})();
+</script>
+
 <script>
 (function(){
   var b=document.getElementById('ctafloat'), z=document.getElementById('zakaz');
