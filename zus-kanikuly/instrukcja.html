@@ -382,8 +382,8 @@ p,li,td,th,.lead,.note p{text-wrap:pretty;hyphens:none}
   <a href="https://t.me/ArkkonaBiuroBot?start=zayavka">Заполнить анкету</a>
 </div>
 <script>
-(function(){
-  var t=document.querySelector('.top'); if(!t||!('IntersectionObserver' in window)) return;
+(function(){window.__zh='run';
+  var t=document.querySelector('.top'); if(!t||!('IntersectionObserver' in window)){window.__zh='skip';return;}
   var foot=document.querySelector('.foot')||document.querySelector('.foot-cta');
   var topSent=document.createElement('div');
   topSent.setAttribute('aria-hidden','true');
@@ -396,6 +396,7 @@ p,li,td,th,.lead,.note p{text-wrap:pretty;hyphens:none}
   if(foot){ new IntersectionObserver(function(e){
     if(e[0].isIntersecting){t.classList.remove('hide');t.classList.add('back');}
   },{rootMargin:'0px 0px -120px 0px'}).observe(foot); }
+  window.__zh='ok';
 })();
 </script>
 
