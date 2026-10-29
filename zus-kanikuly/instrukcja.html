@@ -559,7 +559,8 @@ document.addEventListener('click', function (e) {
   }
   setTimeout(function () {
     var y = t.getBoundingClientRect().top + window.pageYOffset - 12;
-    window.scrollTo({ top: y < 0 ? 0 : y, behavior: 'smooth' });
+    var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: y < 0 ? 0 : y, behavior: calm ? 'auto' : 'smooth' });
     try { history.replaceState(null, '', location.pathname + location.search); } catch (err) {}
   }, 140);
 }, true);
